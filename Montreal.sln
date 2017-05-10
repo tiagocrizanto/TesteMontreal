@@ -1,0 +1,98 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.26403.7
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Complex Domain", "Complex Domain", "{69D0D774-8616-4AF6-83B5-5F98C920357F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Server", "Server", "{4E41DDD1-BD09-426D-A96E-5ACFE7181751}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Site", "Site", "{E730758A-72C6-4745-84DA-06918625AB93}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "Core", "{7BE42827-BBFC-4093-8DA8-A9641C44D1D9}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Modulo1", "Modulo1", "{36332D65-A576-4DB6-85DD-C65109D25580}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Application", "Application", "{A7494B60-7239-4D1F-98CE-BC1B3AA17A63}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Data", "Data", "{08B6FE5F-686C-41EF-B329-A28ABB0FA858}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Domain", "Domain", "{669CDA8A-8C1C-4EE0-B1E0-35EBEF43FBB0}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infra", "Infra", "{88564242-12DC-4D96-A2CE-B608A5662D7F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{2A783F3A-1624-4F14-AC73-56710B20EABE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Montreal.NomeSistema.Modulo1.Application", "Montreal.NomeSistema.Modulo1.Application\Montreal.NomeSistema.Modulo1.Application.csproj", "{8CF484CE-257F-4CA5-BC51-474B8F77EB6D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Montreal.NomeSistema.Modulo1.Data", "Montreal.NomeSistema.Modulo1.Data\Montreal.NomeSistema.Modulo1.Data.csproj", "{BB90CE43-3E34-4513-9A00-14F137DAE9F5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Montreal.NomeSistema.Modulo1.Domain", "Montreal.NomeSistema.Modulo1.Domain\Montreal.NomeSistema.Modulo1.Domain.csproj", "{0C9F324C-230B-48CB-8CE6-96C07CF9A1D7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Montreal.NomeSistema.Modulo1.Infra", "Montreal.NomeSistema.Modulo1.Infra\Montreal.NomeSistema.Modulo1.Infra.csproj", "{22C6FC86-DDD8-4AD4-8FC1-33F402E0ED03}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Montreal.NomeSistema.Modulo1.Tests", "Montreal.NomeSistema.Modulo1.Tests\Montreal.NomeSistema.Modulo1.Tests.csproj", "{EC5FF311-4DA4-4463-A0C9-C55AFDFB247B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Montreal.NomeSistema.Core.Domain", "Montreal.NomeSistema.Core.Domain\Montreal.NomeSistema.Core.Domain.csproj", "{9EBB0FA1-82DD-4B68-BFCE-2FC926C07E6C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Montreal.NomeSistema.Services", "Montreal.NomeSistema.Services\Montreal.NomeSistema.Services.csproj", "{68244329-DF44-4A4F-84E3-79B56B0FD9E5}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8CF484CE-257F-4CA5-BC51-474B8F77EB6D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8CF484CE-257F-4CA5-BC51-474B8F77EB6D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8CF484CE-257F-4CA5-BC51-474B8F77EB6D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8CF484CE-257F-4CA5-BC51-474B8F77EB6D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BB90CE43-3E34-4513-9A00-14F137DAE9F5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BB90CE43-3E34-4513-9A00-14F137DAE9F5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BB90CE43-3E34-4513-9A00-14F137DAE9F5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BB90CE43-3E34-4513-9A00-14F137DAE9F5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0C9F324C-230B-48CB-8CE6-96C07CF9A1D7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0C9F324C-230B-48CB-8CE6-96C07CF9A1D7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0C9F324C-230B-48CB-8CE6-96C07CF9A1D7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0C9F324C-230B-48CB-8CE6-96C07CF9A1D7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{22C6FC86-DDD8-4AD4-8FC1-33F402E0ED03}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{22C6FC86-DDD8-4AD4-8FC1-33F402E0ED03}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{22C6FC86-DDD8-4AD4-8FC1-33F402E0ED03}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{22C6FC86-DDD8-4AD4-8FC1-33F402E0ED03}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EC5FF311-4DA4-4463-A0C9-C55AFDFB247B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EC5FF311-4DA4-4463-A0C9-C55AFDFB247B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EC5FF311-4DA4-4463-A0C9-C55AFDFB247B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EC5FF311-4DA4-4463-A0C9-C55AFDFB247B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9EBB0FA1-82DD-4B68-BFCE-2FC926C07E6C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9EBB0FA1-82DD-4B68-BFCE-2FC926C07E6C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9EBB0FA1-82DD-4B68-BFCE-2FC926C07E6C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9EBB0FA1-82DD-4B68-BFCE-2FC926C07E6C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{68244329-DF44-4A4F-84E3-79B56B0FD9E5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{68244329-DF44-4A4F-84E3-79B56B0FD9E5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{68244329-DF44-4A4F-84E3-79B56B0FD9E5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{68244329-DF44-4A4F-84E3-79B56B0FD9E5}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{E730758A-72C6-4745-84DA-06918625AB93} = {4E41DDD1-BD09-426D-A96E-5ACFE7181751}
+		{7BE42827-BBFC-4093-8DA8-A9641C44D1D9} = {69D0D774-8616-4AF6-83B5-5F98C920357F}
+		{36332D65-A576-4DB6-85DD-C65109D25580} = {69D0D774-8616-4AF6-83B5-5F98C920357F}
+		{A7494B60-7239-4D1F-98CE-BC1B3AA17A63} = {36332D65-A576-4DB6-85DD-C65109D25580}
+		{08B6FE5F-686C-41EF-B329-A28ABB0FA858} = {36332D65-A576-4DB6-85DD-C65109D25580}
+		{669CDA8A-8C1C-4EE0-B1E0-35EBEF43FBB0} = {36332D65-A576-4DB6-85DD-C65109D25580}
+		{88564242-12DC-4D96-A2CE-B608A5662D7F} = {36332D65-A576-4DB6-85DD-C65109D25580}
+		{2A783F3A-1624-4F14-AC73-56710B20EABE} = {36332D65-A576-4DB6-85DD-C65109D25580}
+		{8CF484CE-257F-4CA5-BC51-474B8F77EB6D} = {A7494B60-7239-4D1F-98CE-BC1B3AA17A63}
+		{BB90CE43-3E34-4513-9A00-14F137DAE9F5} = {08B6FE5F-686C-41EF-B329-A28ABB0FA858}
+		{0C9F324C-230B-48CB-8CE6-96C07CF9A1D7} = {669CDA8A-8C1C-4EE0-B1E0-35EBEF43FBB0}
+		{22C6FC86-DDD8-4AD4-8FC1-33F402E0ED03} = {88564242-12DC-4D96-A2CE-B608A5662D7F}
+		{EC5FF311-4DA4-4463-A0C9-C55AFDFB247B} = {2A783F3A-1624-4F14-AC73-56710B20EABE}
+		{9EBB0FA1-82DD-4B68-BFCE-2FC926C07E6C} = {7BE42827-BBFC-4093-8DA8-A9641C44D1D9}
+		{68244329-DF44-4A4F-84E3-79B56B0FD9E5} = {E730758A-72C6-4745-84DA-06918625AB93}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		EnterpriseLibraryConfigurationToolBinariesPathV6 = packages\EnterpriseLibrary.TransientFaultHandling.6.0.1304.0\lib\portable-net45+win+wp8;packages\EnterpriseLibrary.TransientFaultHandling.Data.6.0.1304.0\lib\NET45
+	EndGlobalSection
+EndGlobal

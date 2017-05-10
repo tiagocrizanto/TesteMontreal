@@ -1,0 +1,56 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Montreal.NomeSistema.Modulo1.Application</name>
+    </assembly>
+    <members>
+        <member name="T:Montreal.NomeSistema.Modulo1.Application.DTO.ImagemDto">
+            <summary>
+            Representa imagens relacionadas a produtos
+            </summary>
+        </member>
+        <member name="P:Montreal.NomeSistema.Modulo1.Application.DTO.ImagemDto.Id">
+            <summary>ID da imagem</summary>
+        </member>
+        <member name="P:Montreal.NomeSistema.Modulo1.Application.DTO.ImagemDto.Tipo">
+            <summary>Tipo da imagem PNG, JPG e GIF</summary>
+        </member>
+        <member name="P:Montreal.NomeSistema.Modulo1.Application.DTO.ImagemDto.IdProduto">
+            <summary>Id do produto da imagem</summary>
+        </member>
+        <member name="T:Montreal.NomeSistema.Modulo1.Application.DTO.ProdutoSemRelacionamentosDto">
+            <summary>
+            Representa um produto sem suas imagens relacionadas
+            </summary>
+        </member>
+        <member name="P:Montreal.NomeSistema.Modulo1.Application.DTO.ProdutoSemRelacionamentosDto.Id">
+            <summary>Id do Produto</summary>
+        </member>
+        <member name="P:Montreal.NomeSistema.Modulo1.Application.DTO.ProdutoSemRelacionamentosDto.Nome">
+            <summary>Nome do produto</summary>
+        </member>
+        <member name="P:Montreal.NomeSistema.Modulo1.Application.DTO.ProdutoSemRelacionamentosDto.Descricao">
+            <summary>Descrição do produto</summary>
+        </member>
+        <member name="T:Montreal.NomeSistema.Modulo1.Application.DTO.ProdutoComRelacionamentosDto">
+            <summary>
+            Representa um produto com suas imagens relacionadas
+            </summary>
+        </member>
+        <member name="P:Montreal.NomeSistema.Modulo1.Application.DTO.ProdutoComRelacionamentosDto.Id">
+            <summary>Id do Produto</summary>
+        </member>
+        <member name="P:Montreal.NomeSistema.Modulo1.Application.DTO.ProdutoComRelacionamentosDto.IdProdutoPai">
+            <summary>Indica que é um subproduto</summary>
+        </member>
+        <member name="P:Montreal.NomeSistema.Modulo1.Application.DTO.ProdutoComRelacionamentosDto.Nome">
+            <summary>Nome do produto</summary>
+        </member>
+        <member name="P:Montreal.NomeSistema.Modulo1.Application.DTO.ProdutoComRelacionamentosDto.Descricao">
+            <summary>Descrição do produto</summary>
+        </member>
+        <member name="P:Montreal.NomeSistema.Modulo1.Application.DTO.ProdutoComRelacionamentosDto.Imagens">
+            <summary>Coleção de imagens do produto</summary>
+        </member>
+    </members>
+</doc>
