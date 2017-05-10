@@ -14,6 +14,7 @@ A aplicação foi desenvolvida utilizando DDD, onde, a solution folder *Modulo1*
 O xUnit foi utilizado como framework de testes. Sua escolha foi feita por ser simples de implementar, trabalhar somente com mocks evitando a necessidade de criação de stubs, fakes etc e por ser utilizado como framework de testes do ASP NET conforme pode ser verificado na página oficial https://github.com/aspnet
 O Dapper é um micro ORM criado pelo StackOverflow e tem como princial foco a performance. Na página oficial é possível ver comparações com outros ORM's e micro ORM'm https://github.com/StackExchange/Dapper.
 Este framework foi incluído no projeto como forma de dar possibilidades do desenvolvedor utilizar queries SQL e mapeá-las para objetos.
+O Dapper foi utilizado como demonstração na aplicação através dos métodos ExemploGetTopX nas camadas de serviço e repositório. Este método retorna "SELECT TOP X FROM PRODUTO" onde X é um valor informado pelo programador ou usuário.
 
 # Executando a aplicação
 Visando simplificar a execução e evitar muitas configurações, a aplicação é executada no IIS express com um localdb que é criado e populado toda vez que a aplicação é executada. O método **SeedData** localizado no **Modulo1Context** é responsável por *dropar*, criar e popular o banco de dados a cada execução.
@@ -27,6 +28,7 @@ A área *HelpPage* no projeto Web API foi criada para facilitar a documentação
 
 # Executando os testes unitários
 Os testes foram criados utilizando o xUnit. Para executa a bateria de testes unitários, basta acessar a aba Test Explorer no Visual Studio 2015 ou 2017 e clicar em *Run All*
+Caso os testes não estejam disponíveis nesta aba recompile a aplicação.
 
 # Obtendo dados da aplicação
 Foram criados quatro métodos no controller ProdutosController
@@ -72,23 +74,30 @@ http://localhost:9665/api/ObterImagensPorIdProduto/00000000-0000-0000-0000-00000
 Onde: 00000000-0000-0000-0000-000000000000 é um GUID identificador do produto. Para efetuar o teste basta copiar um GUID no campo Id retornado pelo método **ObterProdutosComRelacionamentos**
 
 **Obtendo dados através do swagger**
+
 Acessar a URL http://localhost:9665/swagger/ui/index e clicar em list operations. Serão listados todos os métodos disponíveis na API.
 
 **Recuperar todos os Produtos excluindo os relacionamentos**
+
 Clicar em GET /api/Produtos/ObterProdutosExcluindoRelacionamentos para expandir e em seguida clicar em Try it out e visualizar o resultado no item *Response Body*
 
 **Recuperar todos os Produtos incluindo um relacionamento específico (Produto ou Imagem)**
+
 Clicar em GET /api/Produtos/ObterProdutosComRelacionamentos e em seguida clicar em Try it out e visualizar o resultado no item *Response Body* e copiar o id do produto Galaxy S8
 
 **Recuperar todos os Produtos excluindo os relacionamentos por id de um produto**
+
 Clicar em GET /api/Produtos/ObterProdutosSemRelacionamentosPorId/{id} e na sessão Parameters informar o Id copiado do método anterior e colar no campo value e clicar em Try it out. Resultado no item *Response Body*
 
 **Recuperar todos os Produtos incluindo um relacionamento específico (Produto ou Imagem) por Id**
+
 Clicar em GET /api/Produtos/ObterProdutosComRelacionamentosPorId/{id} e na sessão Parameters usar o mesmo Id copiado do método anterior e colar no campo value e clicar em Try it out. Resultado no item *Response Body*
 
 
 **Recupera a coleção de produtos filhos por um id de produto específico**
+
 Clicar em GET /api/Produtos/ObterProdutosFilhosPorIdProduto/{id} e na sessão Parameters usar o mesmo Id copiado do método anterior e colar no campo value e clicar em Try it out. Resultado no item *Response Body*
 
 **Recupera a coleção de Imagens para um id de produto específico**
+
 Clicar em GET /api/Produtos/ObterImagensPorIdProduto/{id} na sessão Parameters usar o mesmo Id copiado do método anterior e colar no campo value e clicar em Try it out. Resultado no item *Response Body*
