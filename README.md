@@ -12,19 +12,23 @@ Tecnologias utilizadas:
 # Sobre a aplicação
 A aplicação foi desenvolvida utilizando DDD, onde, a solution folder *Modulo1* dentro de *Complex Domain* foi criada para representar um bounded context.
 O xUnit foi utilizado como framework de testes. Sua escolha foi feita por ser simples de implementar, trabalhar somente com mocks evitando a necessidade de criação de stubs, fakes etc e por ser utilizado como framework de testes do ASP NET conforme pode ser verificado na página oficial https://github.com/aspnet
+
 O Dapper é um micro ORM criado pelo StackOverflow e tem como princial foco a performance. Na página oficial é possível ver comparações com outros ORM's e micro ORM'm https://github.com/StackExchange/Dapper.
+
 Este framework foi incluído no projeto como forma de dar possibilidades do desenvolvedor utilizar queries SQL e mapeá-las para objetos.
-O Dapper foi utilizado como demonstração na aplicação através dos métodos ExemploGetTopX nas camadas de serviço e repositório. Este método retorna "SELECT TOP X FROM PRODUTO" onde X é um valor informado pelo programador ou usuário.
+O Dapper foi utilizado como demonstração na aplicação através do método ExemploGetTopX nas camadas de serviço e repositório. Este método retorna "SELECT TOP X FROM PRODUTO" onde X é um valor recebido como parâmetro.
 
 # Executando a aplicação
 Visando simplificar a execução e evitar muitas configurações, a aplicação é executada no IIS express com um localdb que é criado e populado toda vez que a aplicação é executada. O método **SeedData** localizado no **Modulo1Context** é responsável por *dropar*, criar e popular o banco de dados a cada execução.
-Os métodos retornam dados no padrão JSON e podem ser executados através da url no navegador passado os devidos parametros como o id de um produto.
+
+Os métodos retornam dados no padrão JSON e podem ser executados através da url no navegador passando os devidos parametros como o id de um produto.
 
 obs: Um ponto de melhoria que não foi implementado por não contar na especificação é a utilização de *Token Based Authentication*, onde, cada requisição enviada para API é necessária a inclusão de um token de autenticação para ter sucesso nas requisições. 
 
 A aplicação também conta com o Swagger (http://swagger.io/) que é um framework para ajuda a projetar, construir, documentar e consumir APIs RESTful.
+
 Para utilizar basta executar o projeto e acessar a URL http://localhost:9665/swagger/ui/index
-A área *HelpPage* no projeto Web API foi criada para facilitar a documentação do projeto e evitar que a documentação fique desatualizada com o decorrer do projeto. Nesta área a documentação do projeto é gerada automaticamente e caso ocorra mudanças em nomes de objetos, tipos de parâmetros, tipos de propriedades etc a documentação é atualizada. Nesta área também é a descrição de cada tipo de parâmetro recebido e retornado além de exemplos em como consumir e postar dados para a aplicação. O acesso é feito através da url http://localhost:9665/Help ou clicando no link API na página inicial do projeto.
+A área *HelpPage* no projeto Web API foi criada para facilitar a documentação do projeto e evitar que a documentação fique desatualizada com o decorrer do projeto. Nesta área a documentação do projeto é gerada automaticamente e caso ocorra mudanças em nomes de objetos, tipos de parametros, tipos de propriedades etc a documentação é atualizada. Nesta área também é a descrição de cada tipo de parâmetro recebido e retornado além de exemplos em como consumir e postar dados para a aplicação. O acesso é feito através da url http://localhost:9665/Help ou clicando no link API na página inicial do projeto.
 
 # Executando os testes unitários
 Os testes foram criados utilizando o xUnit. Para executa a bateria de testes unitários, basta acessar a aba Test Explorer no Visual Studio 2015 ou 2017 e clicar em *Run All*
