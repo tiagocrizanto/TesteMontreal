@@ -16,7 +16,7 @@ O xUnit foi utilizado como framework de testes. Sua escolha foi feita por ser si
 O Dapper é um micro ORM criado pelo StackOverflow e tem como princial foco a performance. Na página oficial é possível ver comparações com outros ORM's e micro ORM'm https://github.com/StackExchange/Dapper.
 
 Este framework foi incluído no projeto como forma de dar possibilidades do desenvolvedor utilizar queries SQL e mapeá-las para objetos.
-O Dapper foi utilizado como demonstração na aplicação através do método ExemploGetTopX nas camadas de serviço e repositório. Este método retorna "SELECT TOP X FROM PRODUTO" onde X é um valor recebido como parâmetro.
+O Dapper foi utilizado como demonstração na aplicação através dos métodos ExemploGetTopX e ObterProdutosExcluindoRelacionamentos nas camadas de serviço e repositório. O método ExemploGetTopX Este método retorna "SELECT TOP X FROM PRODUTO" onde X é um valor recebido como parâmetro e o método ObterProdutosExcluindoRelacionamentos utiliza o dapper.contrib para retornar os produtos sem o relacionamento.
 
 # Executando a aplicação
 Visando simplificar a execução e evitar muitas configurações, a aplicação é executada no IIS express com um localdb que é criado e populado toda vez que a aplicação é executada. O método **SeedData** localizado no **Modulo1Context** é responsável por *dropar*, criar e popular o banco de dados a cada execução.
