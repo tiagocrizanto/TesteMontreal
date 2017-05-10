@@ -1,9 +1,9 @@
-﻿using Montreal.NomeSistema.Modulo1.Application.Adapters;
-using Montreal.NomeSistema.Modulo1.Application.DTO;
+﻿using Montreal.NomeSistema.Modulo1.Application.DTO;
 using Montreal.NomeSistema.Modulo1.Domain.Produto.Interfaces.EF;
 using System.Linq;
 using System;
 using System.Collections.Generic;
+using Montreal.NomeSistema.Modulo1.Application.Adapters;
 
 namespace Montreal.NomeSistema.Modulo1.Application
 {
@@ -18,65 +18,27 @@ namespace Montreal.NomeSistema.Modulo1.Application
 
         public IEnumerable<ProdutoSemRelacionamentosDto> ObterProdutosExcluindoRelacionamentos()
         {
-            return _produtoService.GetAll().Select(x => new ProdutoSemRelacionamentosDto
-            {
-                Descricao = x.Descricao,
-                Id = x.Id,
-                Nome = x.Nome
-            });
+            return _produtoService.GetAll().Select(x => ProdutoAdapter.ToProdutoSemRelacionamentoDto(x));
         }
 
         public IEnumerable<ProdutoComRelacionamentosDto> ObterProdutosComRelacionamentos()
         {
-            return _produtoService.GetAll().ToList().Select(x => new ProdutoComRelacionamentosDto
-            {
-                Descricao = x.Descricao,
-                Id = x.Id,
-                Nome = x.Nome,
-                Imagens = x.Imagens.Where(p => p.IdProduto == x.Id).Select(q => new ImagemDto
-                {
-                    Id = q.Id,
-                    IdProduto = q.IdProduto,
-                    Tipo = q.Tipo
-                }).ToList()
-            });
+            return _produtoService.GetAll().ToList().Select(x => ProdutoAdapter.ToProdutoComRelacionamentoDto(x));
         }
 
         public IEnumerable<ProdutoComRelacionamentosDto> ObterProdutosComRelacionamentosPorId(Guid idProduto)
         {
-            return _produtoService.FindAll(x => x.Id == idProduto || x.IdProdutoPai == idProduto).Select(x => new ProdutoComRelacionamentosDto
-            {
-                Descricao = x.Descricao,
-                Id = x.Id,
-                IdProdutoPai = x.IdProdutoPai,
-                Nome = x.Nome,
-                Imagens = x.Imagens.Where(p => p.IdProduto == x.Id).Select(q => new ImagemDto
-                {
-                    Id = q.Id,
-                    IdProduto = q.IdProduto,
-                    Tipo = q.Tipo
-                }).ToList()
-            });
+            return _produtoService.FindAll(x => x.Id == idProduto || x.IdProdutoPai == idProduto).Select(x => ProdutoAdapter.ToProdutoComRelacionamentoDto(x));
         }
 
-        public IEnumerable<ProdutoSemRelacionamentosDto> ObterProdutosFilhosPorIdProduto(Guid idProduto)
+        public IEnumerable<ProdutoComRelacionamentosDto> ObterProdutosFilhosPorIdProduto(Guid idProduto)
         {
-            return _produtoService.FindAll(x => x.IdProdutoPai == idProduto).Select(x => new ProdutoSemRelacionamentosDto
-            {
-                Descricao = x.Descricao,
-                Id = x.Id,
-                Nome = x.Nome
-            });
+            return _produtoService.FindAll(x => x.IdProdutoPai == idProduto).Select(x => ProdutoAdapter.ToProdutoComRelacionamentoDto(x));
         }
 
         public IEnumerable<ProdutoSemRelacionamentosDto> ObterProdutosSemRelacionamentosPorId(Guid idProduto)
         {
-            return _produtoService.FindAll(x => x.Id == idProduto || x.IdProdutoPai == idProduto).Select(x => new ProdutoSemRelacionamentosDto
-            {
-                Descricao = x.Descricao,
-                Id = x.Id,
-                Nome = x.Nome
-            });
+            return _produtoService.FindAll(x => x.Id == idProduto || x.IdProdutoPai == idProduto).Select(x => ProdutoAdapter.ToProdutoSemRelacionamentoDto(x));
         }
     }
 }

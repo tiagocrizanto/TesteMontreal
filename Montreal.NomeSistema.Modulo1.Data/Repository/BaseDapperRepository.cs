@@ -11,7 +11,7 @@ namespace Montreal.NomeSistema.Modulo1.Data.Repository
     {
         public bool Delete(T obj)
         {
-            using (var conn = new SqlConnectionHelper(ConnectionsStringHelper.GpvConnection))
+            using (var conn = new SqlConnectionHelper(ConnectionsStringHelper.DapperConnection))
             {
                 return conn.Delete(obj);
             }
@@ -24,7 +24,7 @@ namespace Montreal.NomeSistema.Modulo1.Data.Repository
 
         public T Get(int id)
         {
-            using (var conn = new SqlConnectionHelper(ConnectionsStringHelper.GpvConnection))
+            using (var conn = new SqlConnectionHelper(ConnectionsStringHelper.DapperConnection))
             {
                 return conn.Get<T>(id);
             }
@@ -32,7 +32,7 @@ namespace Montreal.NomeSistema.Modulo1.Data.Repository
 
         public IEnumerable<T> GetAll()
         {
-            using (var conn = new SqlConnectionHelper(ConnectionsStringHelper.GpvConnection))
+            using (var conn = new SqlConnectionHelper(ConnectionsStringHelper.DapperConnection))
             {
                 return conn.GetAll<T>();
             }
@@ -40,7 +40,7 @@ namespace Montreal.NomeSistema.Modulo1.Data.Repository
 
         public void Insert(T obj)
         {
-            using (var conn = new SqlConnectionHelper(ConnectionsStringHelper.GpvConnection))
+            using (var conn = new SqlConnectionHelper(ConnectionsStringHelper.DapperConnection))
             {
                 conn.Insert(obj);
             }
@@ -53,7 +53,7 @@ namespace Montreal.NomeSistema.Modulo1.Data.Repository
 
         public bool Update(T obj)
         {
-            using (var conn = new SqlConnectionHelper(ConnectionsStringHelper.GpvConnection))
+            using (var conn = new SqlConnectionHelper(ConnectionsStringHelper.DapperConnection))
             {
                 return conn.Update(obj);
             }

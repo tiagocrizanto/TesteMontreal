@@ -7,7 +7,7 @@ namespace Montreal.NomeSistema.Core.Domain.Helpers.Database
     /// </summary>
     public static class ConnectionsStringHelper
     {
-        public static string GpvConnection
+        public static string DapperConnection
         {
             get { return ConfigurationManager.ConnectionStrings["ApplicationContext"].ConnectionString; }
         }

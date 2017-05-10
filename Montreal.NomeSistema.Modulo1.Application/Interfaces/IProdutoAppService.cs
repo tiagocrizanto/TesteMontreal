@@ -10,6 +10,6 @@ namespace Montreal.NomeSistema.Modulo1.Application
         IEnumerable<ProdutoComRelacionamentosDto> ObterProdutosComRelacionamentos();
         IEnumerable<ProdutoComRelacionamentosDto> ObterProdutosComRelacionamentosPorId(Guid idProduto);
         IEnumerable<ProdutoSemRelacionamentosDto> ObterProdutosSemRelacionamentosPorId(Guid idProduto);
-        IEnumerable<ProdutoSemRelacionamentosDto> ObterProdutosFilhosPorIdProduto(Guid idProduto);
+        IEnumerable<ProdutoComRelacionamentosDto> ObterProdutosFilhosPorIdProduto(Guid idProduto);
     }
 }

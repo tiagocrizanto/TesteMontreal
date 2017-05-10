@@ -1,4 +1,7 @@
-﻿using Montreal.NomeSistema.Modulo1.Domain.Core;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq.Expressions;
+using Montreal.NomeSistema.Modulo1.Domain.Core;
 using Montreal.NomeSistema.Modulo1.Domain.Core.Interfaces;
 using Montreal.NomeSistema.Modulo1.Domain.Produto.Interfaces.Dapper;
 using Montreal.NomeSistema.Modulo1.Domain.Produto.Interfaces.EF;
@@ -15,6 +18,25 @@ namespace Montreal.NomeSistema.Modulo1.Domain.Produto.Services
         {
             _produtoDapperRepository = produtoDapperRepository;
             _produtoRepository = produtoRepository;
+        }
+
+        /// <summary>
+        /// Exemplo da utilização do dapper com repositório genérico
+        /// </summary>
+        /// <returns></returns>
+        public override IEnumerable<Produto> GetAll()
+        {
+            return _produtoDapperRepository.GetAll();
+        }
+
+        /// <summary>
+        /// Exemplo da utilização do repositório Dapper
+        /// </summary>
+        /// <param name="top"></param>
+        /// <returns></returns>
+        private IEnumerable<Produto> ExemploGetTopX(int top)
+        {
+            return _produtoDapperRepository.ExemploGetTopX(top);
         }
     }
 }

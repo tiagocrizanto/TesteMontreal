@@ -8,23 +8,7 @@ namespace Montreal.NomeSistema.Modulo1.Application.Adapters
 {
     public static class ProdutoAdapter
     {
-        public static Produto ToProdutoModel(ProdutoComRelacionamentosDto novoProduto)
-        {
-            return new Produto
-            {
-                Id = novoProduto.Id,
-                IdProdutoPai = novoProduto.IdProdutoPai,
-                Descricao = novoProduto.Descricao,
-                Imagens = novoProduto.Imagens.Select(x => new Imagem
-                {
-                    Id = Guid.NewGuid(),
-                    IdProduto = novoProduto.Id,
-                    Tipo = x.Tipo
-                }).ToList()
-            };
-        }
-
-        public static ProdutoComRelacionamentosDto ToProdutoDto(Produto produto)
+        public static ProdutoComRelacionamentosDto ToProdutoComRelacionamentoDto(Produto produto)
         {
             return new ProdutoComRelacionamentosDto
             {
@@ -38,6 +22,16 @@ namespace Montreal.NomeSistema.Modulo1.Application.Adapters
                     IdProduto = x.IdProduto,
                     Tipo = x.Tipo
                 }).ToList()
+            };
+        }
+
+        public static ProdutoSemRelacionamentosDto ToProdutoSemRelacionamentoDto(Produto produto)
+        {
+            return new ProdutoSemRelacionamentosDto
+            {
+                Descricao = produto.Descricao,
+                Id = produto.Id,
+                Nome = produto.Nome
             };
         }
     }

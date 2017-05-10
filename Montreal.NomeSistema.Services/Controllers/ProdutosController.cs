@@ -70,7 +70,7 @@ namespace Montreal.NomeSistema.Services.Controllers
         /// <param name="id"></param>
         /// <returns></returns>
         [HttpGet]
-        public IEnumerable<ProdutoSemRelacionamentosDto> ObterProdutosFilhosPorIdProduto([FromUri] Guid id)
+        public IEnumerable<ProdutoComRelacionamentosDto> ObterProdutosFilhosPorIdProduto([FromUri] Guid id)
         {
             return _produtoAppService.ObterProdutosFilhosPorIdProduto(id);
         }
