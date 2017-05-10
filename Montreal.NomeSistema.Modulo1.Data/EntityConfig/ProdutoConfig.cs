@@ -29,7 +29,7 @@ namespace Montreal.NomeSistema.Modulo1.Data.EntityConfig
                 .WithOptional(e => e.Produto1)
                 .HasForeignKey(e => e.IdProdutoPai);
 
-            ToTable("Produto");
+            ToTable("Produtos");
         }
     }
 }

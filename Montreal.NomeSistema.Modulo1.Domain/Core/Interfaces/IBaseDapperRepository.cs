@@ -12,6 +12,5 @@ namespace Montreal.NomeSistema.Modulo1.Domain.Core.Interfaces
         bool Update(T obj);
         bool Delete(T obj);
         IEnumerable<T> OrderBy(IEnumerable<T> source, string propertyName, bool isDescending);
-        IEnumerable<T> FindPaged(Expression<Func<T, bool>> match, string sortProperty, int sortDirection, int pageIndex, int pageSize, string table, out int total);
     }
 }

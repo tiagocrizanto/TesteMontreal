@@ -17,11 +17,6 @@ namespace Montreal.NomeSistema.Modulo1.Data.Repository
             }
         }
 
-        public IEnumerable<T> FindPaged(Expression<Func<T, bool>> match, string sortProperty, int sortDirection, int pageIndex, int pageSize, string table, out int total)
-        {
-            throw new NotImplementedException();
-        }
-
         public T Get(int id)
         {
             using (var conn = new SqlConnectionHelper(ConnectionsStringHelper.DapperConnection))

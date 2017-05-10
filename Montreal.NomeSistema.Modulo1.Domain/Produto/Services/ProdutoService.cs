@@ -21,15 +21,6 @@ namespace Montreal.NomeSistema.Modulo1.Domain.Produto.Services
         }
 
         /// <summary>
-        /// Exemplo da utilização do dapper com repositório genérico
-        /// </summary>
-        /// <returns></returns>
-        public override IEnumerable<Produto> GetAll()
-        {
-            return _produtoDapperRepository.GetAll();
-        }
-
-        /// <summary>
         /// Exemplo da utilização do repositório Dapper
         /// </summary>
         /// <param name="top"></param>

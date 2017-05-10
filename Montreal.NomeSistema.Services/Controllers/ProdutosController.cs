@@ -9,7 +9,6 @@ namespace Montreal.NomeSistema.Services.Controllers
     /// <summary>
     /// Controlador responsável pelo gerenciamento e obtenção de produtos
     /// </summary>
-    [RoutePrefix("v1/Produtos")]
     public class ProdutosController : ApiController
     {
         private readonly IProdutoAppService _produtoAppService;
