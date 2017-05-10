@@ -18,7 +18,7 @@ namespace Montreal.NomeSistema.Modulo1.Application
 
         public IEnumerable<ProdutoSemRelacionamentosDto> ObterProdutosExcluindoRelacionamentos()
         {
-            return _produtoService.GetAll().Select(x => ProdutoAdapter.ToProdutoSemRelacionamentoDto(x));
+            return _produtoService.ObterProdutosExcluindoRelacionamentos().Select(x => ProdutoAdapter.ToProdutoSemRelacionamentoDto(x));
         }
 
         public IEnumerable<ProdutoComRelacionamentosDto> ObterProdutosComRelacionamentos()

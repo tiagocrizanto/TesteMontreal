@@ -20,6 +20,11 @@ namespace Montreal.NomeSistema.Modulo1.Domain.Produto.Services
             _produtoRepository = produtoRepository;
         }
 
+        public IEnumerable<Produto> ObterProdutosExcluindoRelacionamentos()
+        {
+            return _produtoDapperRepository.ObterProdutosExcluindoRelacionamentos();
+        }
+
         /// <summary>
         /// Exemplo da utilização do repositório Dapper
         /// </summary>

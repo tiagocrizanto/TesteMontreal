@@ -6,5 +6,6 @@ namespace Montreal.NomeSistema.Modulo1.Domain.Produto.Interfaces.Dapper
     public interface IProdutoDapperRepository : IBaseDapperRepository<Produto>
     {
         IEnumerable<Produto> ExemploGetTopX(int top);
+        IEnumerable<Produto> ObterProdutosExcluindoRelacionamentos();
     }
 }
