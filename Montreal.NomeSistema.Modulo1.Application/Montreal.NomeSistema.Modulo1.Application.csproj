@@ -32,6 +32,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -42,7 +43,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Adapters\ProdutoAdapter.cs" />
+    <Compile Include="DTO\AtualizarProdutoDto.cs" />
     <Compile Include="DTO\ImagemDto.cs" />
+    <Compile Include="DTO\ProdutoDto.cs" />
     <Compile Include="DTO\ProdutoSemRelacionamentosDto.cs" />
     <Compile Include="DTO\ProdutoComRelacionamentosDto.cs" />
     <Compile Include="ImagemAppService.cs" />

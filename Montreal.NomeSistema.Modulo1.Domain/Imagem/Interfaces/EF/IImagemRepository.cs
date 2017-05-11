@@ -1,6 +1,8 @@
-﻿namespace Montreal.NomeSistema.Modulo1.Domain.Imagem.Interfaces.EF
+﻿using Montreal.NomeSistema.Modulo1.Domain.Core.Interfaces;
+
+namespace Montreal.NomeSistema.Modulo1.Domain.Imagem.Interfaces.EF
 {
-    public interface IImagemRepository
+    public interface IImagemRepository : IBaseRepository<Imagem>
     {
     }
 }

@@ -15,31 +15,35 @@ namespace Montreal.NomeSistema.Modulo1.Domain.Core
             _baseRepository = baseRepository;
         }
 
-        public virtual void Create(TEntity entity)
+        public virtual bool Create(TEntity entity)
         {
             try
             {
                 _baseRepository.Create(entity);
+                return true;
             }
             catch (Exception ex)
             {
+                return false;
                 throw new Exception(ex.Message, ex);
             }
         }
 
-        public virtual void Create(IList<TEntity> entities)
+        public virtual bool Create(IList<TEntity> entities)
         {
             try
             {
                 _baseRepository.Create(entities);
+                return true;
             }
             catch (Exception ex)
             {
+                return false;
                 throw new Exception(ex.Message, ex);
             }
         }
 
-        public virtual void CreateOrUpdate(TEntity entity)
+        public virtual bool CreateOrUpdate(TEntity entity)
         {
             try
             {
@@ -48,70 +52,90 @@ namespace Montreal.NomeSistema.Modulo1.Domain.Core
                     Create(entity);
                 else
                     Update(entity);
+
+                return true;
             }
             catch (Exception ex)
             {
+                return false;
                 throw new Exception(ex.Message, ex);
             }
         }
 
-        public virtual void CreateOrUpdate(IList<TEntity> entities)
+        public virtual bool CreateOrUpdate(IList<TEntity> entities)
         {
-            foreach (var entity in entities)
+            try
             {
-                CreateOrUpdate(entity);
+                foreach (var entity in entities)
+                {
+                    CreateOrUpdate(entity);
+                }
+                return true;
+            }
+            catch (Exception ex)
+            {
+                return false;
+                throw new Exception(ex.Message, ex);
             }
         }
 
-        public virtual void Update(TEntity entity)
+        public virtual bool Update(TEntity entity)
         {
             try
             {
                 _baseRepository.Update(entity);
+                return true;
             }
             catch (Exception ex)
             {
+                return false;
                 throw new Exception(ex.Message, ex);
             }
         }
 
-        public virtual void Update(IEnumerable<TEntity> entities)
+        public virtual bool Update(IEnumerable<TEntity> entities)
         {
             try
             {
                 _baseRepository.Update(entities);
+                return true;
             }
             catch (Exception ex)
             {
+                return false;
                 throw new Exception(ex.Message, ex);
             }
         }
 
-        public virtual void Delete(TEntity id)
+        public virtual bool Delete(TEntity id)
         {
             try
             {
                 _baseRepository.Delete(id);
+                return true;
             }
             catch (Exception ex)
             {
+                return false;
                 throw new Exception(ex.Message, ex);
             }
         }
 
-        public virtual void Delete(object entityPK)
+        public virtual bool Delete(object entityPK)
         {
             try
             {
                 _baseRepository.Delete(entityPK);
+                return true;
             }
             catch (Exception ex)
             {
+                return false;
                 throw new Exception(ex.Message, ex);
             }
         }
 
-        public virtual void Delete(IEnumerable<TEntity> entities)
+        public virtual bool Delete(IEnumerable<TEntity> entities)
         {
             try
             {
@@ -119,9 +143,11 @@ namespace Montreal.NomeSistema.Modulo1.Domain.Core
                 {
                     Delete((int)entity.GetType().GetProperty("Id").GetValue(entity));
                 }
+                return true;
             }
             catch (Exception ex)
             {
+                return false;
                 throw new Exception(ex.Message, ex);
             }
         }

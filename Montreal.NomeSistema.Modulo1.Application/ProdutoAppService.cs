@@ -16,6 +16,37 @@ namespace Montreal.NomeSistema.Modulo1.Application
             _produtoService = produtoService;
         }
 
+        public bool AdicionarProduto(ProdutoDto produtoDto)
+        {
+            return _produtoService.Create(ProdutoAdapter.ToProdutoModel(produtoDto));
+        }
+
+        public bool ExcluirProduto(Guid id)
+        {
+            if (_produtoService.FindByPK(id) == null)
+                return false;
+
+            return _produtoService.Delete(id);
+        }
+
+        public bool AtualizarProduto(AtualizarProdutoDto produto)
+        {
+            var produtoModel = _produtoService.FindByPK(produto.Id);
+
+            if (produtoModel == null)
+                return false;
+
+            return _produtoService.Update(ProdutoAdapter.ToProdutoModel(produto, produtoModel));
+        }
+
+        public ProdutoComRelacionamentosDto RetornarProdutoPorId(Guid id)
+        {
+            if (_produtoService.FindByPK(id) == null)
+                return null;
+
+            return ProdutoAdapter.ToProdutoComRelacionamentoDto(_produtoService.FindByPK(id));
+        }
+        
         public IEnumerable<ProdutoSemRelacionamentosDto> ObterProdutosExcluindoRelacionamentos()
         {
             return _produtoService.ObterProdutosExcluindoRelacionamentos().Select(x => ProdutoAdapter.ToProdutoSemRelacionamentoDto(x));

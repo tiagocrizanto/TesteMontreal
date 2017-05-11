@@ -50,12 +50,14 @@ namespace Montreal.NomeSistema.Modulo1.Data.Context
 
             celular.Imagens.Add(new Imagem
             {
+                Id = Guid.Parse("c56a4180-65aa-1234-a945-5fd21dec1234"),
                 IdProduto = celular.Id,
                 Tipo = "jpg"
             });
 
             celular.Imagens.Add(new Imagem
             {
+                Id = Guid.Parse("c56a4180-4321-42ec-a945-5fd21dec1234"),
                 IdProduto = celular.Id,
                 Tipo = "gif"
             });
@@ -64,6 +66,7 @@ namespace Montreal.NomeSistema.Modulo1.Data.Context
 
             var acessorio = new Produto
             {
+                Id = Guid.Parse("c56a4180-65aa-42ec-a945-5fd21dec1234"),
                 Descricao = "Emborrachada na cor preta",
                 IdProdutoPai = celular.Id,
                 Nome = "Capa celular Galaxy S8",
@@ -72,12 +75,14 @@ namespace Montreal.NomeSistema.Modulo1.Data.Context
 
             acessorio.Imagens.Add(new Imagem
             {
+                Id = Guid.Parse("c56a4180-65aa-42ec-abcd-5fd21dec1234"),
                 IdProduto = acessorio.Id,
                 Tipo = "png"
             });
 
             var acessorio1 = new Produto
             {
+                Id = Guid.Parse("c56a4180-65aa-42ec-a945-5fd21dec4321"),
                 Descricao = "Material gorila glass",
                 IdProdutoPai = celular.Id,
                 Nome = "Película de vidro",
@@ -86,6 +91,7 @@ namespace Montreal.NomeSistema.Modulo1.Data.Context
 
             acessorio1.Imagens.Add(new Imagem
             {
+                Id = Guid.Parse("a1234180-65aa-42ec-a945-5fd21dec1234"),
                 IdProduto = acessorio1.Id,
                 Tipo = "png"
             });
@@ -107,6 +113,7 @@ namespace Montreal.NomeSistema.Modulo1.Data.Context
 
                 context.Imagem.Add(new Imagem
                 {
+                    Id = Guid.Parse("c56a4180-65aa-42ec-aa11-5fd21dec1234"),
                     IdProduto = produto.Id,
                     Tipo = imagens [new Random().Next(0, imagens.Length)]
                 });

@@ -4,6 +4,18 @@
         <name>Montreal.NomeSistema.Modulo1.Application</name>
     </assembly>
     <members>
+        <member name="P:Montreal.NomeSistema.Modulo1.Application.DTO.AtualizarProdutoDto.Id">
+            <summary>Id do produto</summary>
+        </member>
+        <member name="P:Montreal.NomeSistema.Modulo1.Application.DTO.AtualizarProdutoDto.Nome">
+            <summary>Nome do produto</summary>
+        </member>
+        <member name="P:Montreal.NomeSistema.Modulo1.Application.DTO.AtualizarProdutoDto.Descricao">
+            <summary>Descrição do produto</summary>
+        </member>
+        <member name="P:Montreal.NomeSistema.Modulo1.Application.DTO.AtualizarProdutoDto.IdProdutoPai">
+            <summary>Sub produto de um produto</summary>
+        </member>
         <member name="T:Montreal.NomeSistema.Modulo1.Application.DTO.ImagemDto">
             <summary>
             Representa imagens relacionadas a produtos
@@ -17,6 +29,21 @@
         </member>
         <member name="P:Montreal.NomeSistema.Modulo1.Application.DTO.ImagemDto.IdProduto">
             <summary>Id do produto da imagem</summary>
+        </member>
+        <member name="P:Montreal.NomeSistema.Modulo1.Application.DTO.ProdutoDto.Id">
+            <summary>Id do produto</summary>
+        </member>
+        <member name="P:Montreal.NomeSistema.Modulo1.Application.DTO.ProdutoDto.Nome">
+            <summary>Nome do produto</summary>
+        </member>
+        <member name="P:Montreal.NomeSistema.Modulo1.Application.DTO.ProdutoDto.Descricao">
+            <summary>Descrição do produto</summary>
+        </member>
+        <member name="P:Montreal.NomeSistema.Modulo1.Application.DTO.ProdutoDto.IdProdutoPai">
+            <summary>Sub produto de um produto</summary>
+        </member>
+        <member name="P:Montreal.NomeSistema.Modulo1.Application.DTO.ProdutoDto.Imagens">
+            <summary>Imagens do produto</summary>
         </member>
         <member name="T:Montreal.NomeSistema.Modulo1.Application.DTO.ProdutoSemRelacionamentosDto">
             <summary>

@@ -486,6 +486,34 @@
             Controlador responsável pelo gerenciamento e obtenção de produtos
             </summary>
         </member>
+        <member name="M:Montreal.NomeSistema.Services.Controllers.ProdutosController.AdicionarProduto(Montreal.NomeSistema.Modulo1.Application.DTO.ProdutoDto)">
+            <summary>
+            Adiciona um novo produto
+            </summary>
+            <param name="produto"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Montreal.NomeSistema.Services.Controllers.ProdutosController.ExcluirProduto(System.Guid)">
+            <summary>
+            Excluir um produto do banco
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Montreal.NomeSistema.Services.Controllers.ProdutosController.AtualizarProduto(Montreal.NomeSistema.Modulo1.Application.DTO.AtualizarProdutoDto)">
+            <summary>
+            Atualiza um produto existente
+            </summary>
+            <param name="produto"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Montreal.NomeSistema.Services.Controllers.ProdutosController.RetornarProdutoPorId(System.Guid)">
+            <summary>
+            Retorna um produto de acordo com o id
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
         <member name="M:Montreal.NomeSistema.Services.Controllers.ProdutosController.ObterProdutosExcluindoRelacionamentos">
             <summary>
             Recuperar todos os Produtos excluindo os relacionamentos

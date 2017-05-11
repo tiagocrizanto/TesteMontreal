@@ -9,9 +9,6 @@ namespace Montreal.NomeSistema.Modulo1.Data.EntityConfig
         {
             HasKey(x => x.Id);
 
-            Property(x => x.Id)
-                .HasDatabaseGeneratedOption(DatabaseGeneratedOption.Identity);
-
             Property(x => x.Nome)
                 .HasMaxLength(255)
                 .IsRequired();

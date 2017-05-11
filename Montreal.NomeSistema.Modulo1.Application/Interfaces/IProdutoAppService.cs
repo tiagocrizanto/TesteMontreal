@@ -6,6 +6,10 @@ namespace Montreal.NomeSistema.Modulo1.Application
 {
     public interface IProdutoAppService
     {
+        bool AdicionarProduto(ProdutoDto produtoDto);
+        bool ExcluirProduto(Guid id);
+        bool AtualizarProduto(AtualizarProdutoDto produto);
+        ProdutoComRelacionamentosDto RetornarProdutoPorId(Guid id);
         IEnumerable<ProdutoSemRelacionamentosDto> ObterProdutosExcluindoRelacionamentos();
         IEnumerable<ProdutoComRelacionamentosDto> ObterProdutosComRelacionamentos();
         IEnumerable<ProdutoComRelacionamentosDto> ObterProdutosComRelacionamentosPorId(Guid idProduto);
