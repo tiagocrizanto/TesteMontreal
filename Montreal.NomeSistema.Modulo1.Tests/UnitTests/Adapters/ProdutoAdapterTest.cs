@@ -104,5 +104,43 @@ namespace Montreal.NomeSistema.Modulo1.Tests.UnitTests.Adapters
             Assert.Equal(produtoDtoEsperado.Nome, produtoDtoRetorno.Nome);
             Assert.Equal(produtoDtoEsperado.Descricao, produtoDtoRetorno.Descricao);
         }
+
+        [Fact]
+        [Trait("Produtos", "Conversão dto para entidade")]
+        public void ProdutoAdapter_ConverterParaModel_DeveRetornarModelProdutoSemImagemBaseadoEmUmaEntidade()
+        {
+            //Arrange
+            var produtoId = Guid.NewGuid();
+            var imagemId = Guid.NewGuid();
+            var produtoDtoEsperado = new AtualizarProdutoDto
+            {
+                Id = produtoId,
+                Descricao = "Descrição novo Produto",
+                Nome = "Nome novo produto"
+            };
+
+            var produto = new Produto
+            {
+                Id = produtoId,
+                Descricao = "Descrição novo Produto",
+                Nome = "Nome novo produto",
+                IdProdutoPai = null
+            };
+
+            var produtoDto = new AtualizarProdutoDto
+            {
+                Id = produtoId,
+                Descricao = "Descrição novo Produto",
+                Nome = "Nome novo produto"
+            };
+
+            //Act
+            var produtoDtoRetorno = ProdutoAdapter.ToProdutoModel(produtoDto, produto);
+
+            //Assert
+            Assert.Equal(produtoDtoEsperado.Id.ToString(), produtoDtoRetorno.Id.ToString());
+            Assert.Equal(produtoDtoEsperado.Nome, produtoDtoRetorno.Nome);
+            Assert.Equal(produtoDtoEsperado.Descricao, produtoDtoRetorno.Descricao);
+        }
     }
 }

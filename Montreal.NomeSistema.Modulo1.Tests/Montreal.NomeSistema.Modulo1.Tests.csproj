@@ -79,6 +79,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UnitTests\Adapters\ImagemAdapterTest.cs" />
     <Compile Include="UnitTests\Adapters\ProdutoAdapterTest.cs" />
     <Compile Include="UnitTests\ImagemTests.cs" />
     <Compile Include="UnitTests\ProdutoTests.cs" />
