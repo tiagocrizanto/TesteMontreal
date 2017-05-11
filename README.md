@@ -162,7 +162,8 @@ Novo produto pai
 		"Tipo": "png",
 		"IdProduto": "f89562b6-d018-452c-a67a-3c3ffcd9e081"
 	}]
-}```
+}
+```
 
 Novo produto filho
 ```sh
