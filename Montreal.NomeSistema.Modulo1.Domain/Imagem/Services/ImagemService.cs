@@ -16,5 +16,24 @@ namespace Montreal.NomeSistema.Modulo1.Domain.Imagem.Services
             _imagemRepository = imagemRepository;
             _imagemDapperRepository = imagemDapperRepository;
         }
+
+        public override bool Create(Imagem imagem)
+        {
+            if (FindByPK(imagem.Id) != null)
+                return false;
+
+            base.Create(imagem);
+
+            return true;
+        }
+
+        public override bool Update(Imagem imagem)
+        {
+            //Verifica se a imagem está relacionada ao produto
+            if (FindByPK(imagem.Id).IdProduto != imagem.IdProduto)
+                return false;
+
+            return base.Update(imagem);
+        }
     }
 }

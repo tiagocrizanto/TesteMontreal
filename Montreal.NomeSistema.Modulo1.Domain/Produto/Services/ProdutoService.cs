@@ -38,7 +38,7 @@ namespace Montreal.NomeSistema.Modulo1.Domain.Produto.Services
             if (produto.IdProdutoPai != null && FindAll(x => x.Id == produto.IdProdutoPai) == null)
                 return false;
 
-            _produtoRepository.Create(produto);
+            base.Create(produto);
             return true;
         }
 
@@ -69,7 +69,7 @@ namespace Montreal.NomeSistema.Modulo1.Domain.Produto.Services
             if (FindAll(x => x.Id == produto.IdProdutoPai) == null)
                 return false;
 
-            _produtoRepository.Update(produto);
+            base.Update(produto);
             return true;
         }
 

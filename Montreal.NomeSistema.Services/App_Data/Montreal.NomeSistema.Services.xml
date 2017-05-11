@@ -481,6 +481,39 @@
             </summary>
             <param name="documentPath">The physical path to XML document.</param>
         </member>
+        <member name="T:Montreal.NomeSistema.Services.Controllers.ImagemController">
+            <summary>
+            Controlador responsável pelo gerenciamento de imagens
+            </summary>
+        </member>
+        <member name="M:Montreal.NomeSistema.Services.Controllers.ImagemController.AdicionarImagem(Montreal.NomeSistema.Modulo1.Application.DTO.ImagemDto)">
+            <summary>
+            Adiciona imagens para um produto
+            </summary>
+            <param name="imagem"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Montreal.NomeSistema.Services.Controllers.ImagemController.ExcluirImagem(System.Guid)">
+            <summary>
+            Excluir uma imagem do banco
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Montreal.NomeSistema.Services.Controllers.ImagemController.AtualizarImagem(Montreal.NomeSistema.Modulo1.Application.DTO.ImagemDto)">
+            <summary>
+            Atualiza um produto existente
+            </summary>
+            <param name="produto"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Montreal.NomeSistema.Services.Controllers.ImagemController.RetornarImagemPorId(System.Guid)">
+            <summary>
+            Retorna um produto de acordo com o id
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
         <member name="T:Montreal.NomeSistema.Services.Controllers.ProdutosController">
             <summary>
             Controlador responsável pelo gerenciamento e obtenção de produtos

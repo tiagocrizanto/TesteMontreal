@@ -41,10 +41,11 @@ namespace Montreal.NomeSistema.Modulo1.Application
 
         public ProdutoComRelacionamentosDto RetornarProdutoPorId(Guid id)
         {
-            if (_produtoService.FindByPK(id) == null)
+            var produto = _produtoService.FindByPK(id);
+            if (produto == null)
                 return null;
 
-            return ProdutoAdapter.ToProdutoComRelacionamentoDto(_produtoService.FindByPK(id));
+            return ProdutoAdapter.ToProdutoComRelacionamentoDto(produto);
         }
         
         public IEnumerable<ProdutoSemRelacionamentosDto> ObterProdutosExcluindoRelacionamentos()
