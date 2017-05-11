@@ -105,3 +105,97 @@ Clicar em GET /api/Produtos/ObterProdutosFilhosPorIdProduto/{id} e na sessão Pa
 **Recupera a coleção de Imagens para um id de produto específico**
 
 Clicar em GET /api/Produtos/ObterImagensPorIdProduto/{id} na sessão Parameters usar o mesmo Id copiado do método anterior e colar no campo value e clicar em Try it out. Resultado no item *Response Body*
+
+
+# CRUD através do swagger
+
+Executar a aplicação acessar a URL http://localhost:9665/swagger
+
+**Imagens***
+
+**POST /api/Imagem/AdicionarImagem**
+
+Utilizar o JSON como parametro
+```sh
+{ 
+  "Id": "8b7aacd4-cfb2-4ca8-b5ff-af7698439c0c",
+  "Tipo": "png",
+  "IdProduto": "c56a4180-65aa-42ec-a945-5fd21dec0538"
+}
+```
+
+**POST /api/Imagem/RetornarImagemPorId/{id}**
+
+Utilizar o ID 8b7aacd4-cfb2-4ca8-b5ff-af7698439c0c como parametro
+
+**POST /api/Imagem/AtualizarImagem**
+Utilizar o JSON como parametro
+```sh
+{ 
+  "Id": "8b7aacd4-cfb2-4ca8-b5ff-af7698439c0c",
+  "Tipo": "jpg",
+  "IdProduto": "c56a4180-65aa-42ec-a945-5fd21dec0538"
+}
+```
+
+**POST /api/Imagem/ExcluirImagem/{id}**
+
+Utilizar o ID 8b7aacd4-cfb2-4ca8-b5ff-af7698439c0c como parametro
+
+
+**Produtos***
+
+**POST /api/Produtos/AdicionarProduto**
+
+Utilizar o JSON abaixo
+
+Novo produto pai
+```sh
+{ 
+  "Id": "f89562b6-d018-452c-a67a-3c3ffcd9e081",
+  "Nome": "Novo produto adicionado",
+  "Descricao": "Descrição do novo produto",
+  "IdProdutoPai": null,
+  "Imagens": 
+	[{
+		"Id": "d0d7e54e-899c-42c9-9d98-88f449ab4429",
+		"Tipo": "png",
+		"IdProduto": "f89562b6-d018-452c-a67a-3c3ffcd9e081"
+	}]
+}```
+
+Novo produto filho
+```sh
+{ 
+  "Id": "f89562b6-aaaa-452c-a67a-3c3ffcd9e081",
+  "Nome": "Produto filho adicionado",
+  "Descricao": "Descrição produto filho adicionado",
+  "IdProdutoPai": "f89562b6-d018-452c-a67a-3c3ffcd9e081",
+  "Imagens": 
+	[{
+		"Id": "d0d7e54e-aaaa-42c9-9d98-88f449ab4429",
+		"Tipo": "png",
+		"IdProduto": "f89562b6-aaaa-452c-a67a-3c3ffcd9e081"
+	}]
+}
+```
+
+**POST /api/Produtos/RetornarProdutoPorId/{id}**
+Utilizar o GUID f89562b6-d018-452c-a67a-3c3ffcd9e081 como parametro
+
+**POST /api/Produtos/AtualizarProduto**
+
+Utilizar o json abaixo
+
+```sh
+{ 
+  "Id": "f89562b6-d018-452c-a67a-3c3ffcd9e081",
+  "Nome": "Novo produto adicionado atualizado",
+  "Descricao": "Descrição do novo produto atualizado",
+  "IdProdutoPai": null
+}
+```
+
+**POST /api/Produtos/ExcluirProduto/{id}**
+
+Utilizar o ID 8b7aacd4-cfb2-4ca8-b5ff-af7698439c0c como parametro
